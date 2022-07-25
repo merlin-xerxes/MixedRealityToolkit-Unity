@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GoalCheckerBasketball : MonoBehaviour
 {
+    public GameObject checkbox;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class GoalCheckerBasketball : MonoBehaviour
     {
         if (other.tag == "Basketball")
         {
+            checkbox.SetActive(true);
             Debug.Log("Point made");
         }
         
