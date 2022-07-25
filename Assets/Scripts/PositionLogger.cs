@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Microsoft.MixedReality.Toolkit.Input;
+
+
 public class PositionLogger : Logger
 {
     private List<Transform> positions = new List<Transform>();
@@ -9,6 +12,8 @@ public class PositionLogger : Logger
     public Transform trans;
 
     private int counter = 0;
+
+    public GazeProvider prov;
 
     public override List<string> GetData()
     {
@@ -18,8 +23,10 @@ public class PositionLogger : Logger
     public override void WriteData()
     {
         Debug.Log(counter);
-        positions[0] = trans;
-        Debug.Log("in PositionLogger Ausführung: " + counter + " aktuelle Position: " + positions[counter].position);
+        Debug.Log("Blickrichtung: " + prov.GazeDirection);
+        Debug.Log("BlickObjekt: " + prov.GazeTarget.name);
+        //positions[0] = trans;
+        //Debug.Log("in PositionLogger Ausführung: " + counter + " aktuelle Position: " + positions[counter].position);
         counter++;
 
     }
