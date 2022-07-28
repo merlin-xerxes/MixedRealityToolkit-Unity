@@ -4,6 +4,7 @@ using UnityEngine;
 
 using Microsoft.MixedReality.Toolkit.Utilities;
 using Microsoft.MixedReality.Toolkit.Input;
+using Mujoco;
 
 public class CustomHandTracking : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class CustomHandTracking : MonoBehaviour
     GameObject middleObject;
     GameObject ringObject;
     GameObject pinkyObject;
+
+    public MjActuator xController;
+    public MjActuator yController;
 
     MixedRealityPose pose;
     
@@ -35,6 +39,12 @@ public class CustomHandTracking : MonoBehaviour
         ringObject.GetComponent<Renderer>().enabled = false;
         pinkyObject.GetComponent<Renderer>().enabled = false;
 
+        Vector3 directionVector = indexObject.transform.position - pose.Position;
+        float controlValue = 3;
+
+        xController.Control = controlValue;
+
+
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Right, out pose))
         {
             thumbObject.GetComponent<Renderer>().enabled = true;
@@ -45,6 +55,8 @@ public class CustomHandTracking : MonoBehaviour
         {
             indexObject.GetComponent<Renderer>().enabled = true;
             indexObject.transform.position = pose.Position;
+            //GameObject index = GameObject.FindGameObjectWithTag("Player");
+            //index.transform.position = Vector3.MoveTowards(transform.position,pose.Position, 0.03f*Time.deltaTime);
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Right, out pose))
