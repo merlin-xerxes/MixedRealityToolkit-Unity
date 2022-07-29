@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.2.tgz",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.ide.rider": "3.0.14",
@@ -14,7 +13,6 @@
     "com.unity.xr.arfoundation": "4.2.3",
     "com.unity.xr.legacyinputhelpers": "2.1.9",
     "com.unity.xr.openxr": "1.4.2",
-    "org.mujoco": "file:C:/Users/vince/MuJoCo/mujoco-2.2.0/unity",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -45,6 +43,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.3.tgz"
   }
 }

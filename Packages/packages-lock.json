@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.microsoft.mixedreality.openxr": {
-      "version": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.2.tgz",
+      "version": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.3.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
@@ -174,12 +174,6 @@
         "com.unity.inputsystem": "1.3.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "org.mujoco": {
-      "version": "file:C:/Users/vince/MuJoCo/mujoco-2.2.0/unity",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
