@@ -385,7 +385,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494132515}
-  m_Mesh: {fileID: 1665721118}
+  m_Mesh: {fileID: 1792186100}
 --- !u!114 &494132519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,8 +1043,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sphereMarker: {fileID: 139570190272902342, guid: a4d505b03ab1a1949bc4f4444fd8edb2,
     type: 3}
-  xController: {fileID: 0}
-  yController: {fileID: 0}
+  ball: {fileID: 1802418165}
+  xController: {fileID: 1171673964}
+  yController: {fileID: 1688285721}
 --- !u!4 &1262131640
 Transform:
   m_ObjectHideFlags: 0
@@ -1232,13 +1233,104 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1665721118
+--- !u!1 &1688285719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1688285720}
+  - component: {fileID: 1688285721}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1688285720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688285719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 828013049}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1688285721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688285719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddffafbcf1a6e184ba8c0d78ff85a4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2
+  Joint: {fileID: 373762827}
+  Tendon: {fileID: 0}
+  CustomParams:
+    DynType: 0
+    GainType: 0
+    BiasType: 0
+    DynPrm:
+    - 1
+    - 0
+    - 0
+    GainPrm:
+    - 1
+    - 0
+    - 0
+    BiasPrm:
+    - 0
+    - 0
+    - 0
+    Kp: 1
+    Kv: 1
+    CylinderTimeConst: 1
+    Area: 1
+    Diameter: 0
+    Bias:
+    - 0
+    - 0
+    - 0
+    MuscleTimeConst: {x: 0.01, y: 0.04}
+    Range: {x: 0.75, y: 1.05}
+    Force: -1
+    Scale: 200
+    LMin: 0.5
+    LMax: 1.6
+    VMax: 1.5
+    FpMax: 1.3
+    FvMax: 1.2
+  CommonParams:
+    CtrlLimited: 0
+    ForceLimited: 0
+    CtrlRange: {x: 0, y: 0}
+    ForceRange: {x: 0, y: 0}
+    LengthRange: {x: 0, y: 0}
+    Gear:
+    - 0
+    - 1
+  Control: 0
+--- !u!43 &1792186100
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mujoco mesh for plane, id:-67362
+  m_Name: Mujoco mesh for plane, id:-12932
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1396,97 +1488,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1688285719
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1688285720}
-  - component: {fileID: 1688285721}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1688285720
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688285719}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 828013049}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1688285721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688285719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddffafbcf1a6e184ba8c0d78ff85a4e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Joint: {fileID: 373762827}
-  Tendon: {fileID: 0}
-  CustomParams:
-    DynType: 0
-    GainType: 0
-    BiasType: 0
-    DynPrm:
-    - 1
-    - 0
-    - 0
-    GainPrm:
-    - 1
-    - 0
-    - 0
-    BiasPrm:
-    - 0
-    - 0
-    - 0
-    Kp: 1
-    Kv: 1
-    CylinderTimeConst: 1
-    Area: 1
-    Diameter: 0
-    Bias:
-    - 0
-    - 0
-    - 0
-    MuscleTimeConst: {x: 0.01, y: 0.04}
-    Range: {x: 0.75, y: 1.05}
-    Force: -1
-    Scale: 200
-    LMin: 0.5
-    LMax: 1.6
-    VMax: 1.5
-    FpMax: 1.3
-    FvMax: 1.2
-  CommonParams:
-    CtrlLimited: 0
-    ForceLimited: 0
-    CtrlRange: {x: 0, y: 0}
-    ForceRange: {x: 0, y: 0}
-    LengthRange: {x: 0, y: 0}
-    Gear:
-    - 0
-    - 1
-  Control: 0
 --- !u!1 &1802418165
 GameObject:
   m_ObjectHideFlags: 0

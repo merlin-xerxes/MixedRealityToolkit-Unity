@@ -16,6 +16,8 @@ public class CustomHandTracking : MonoBehaviour
     GameObject ringObject;
     GameObject pinkyObject;
 
+    public GameObject ball;
+
     public MjActuator xController;
     public MjActuator yController;
 
@@ -39,10 +41,10 @@ public class CustomHandTracking : MonoBehaviour
         ringObject.GetComponent<Renderer>().enabled = false;
         pinkyObject.GetComponent<Renderer>().enabled = false;
 
-        Vector3 directionVector = indexObject.transform.position - pose.Position;
-        float controlValue = 3;
+        //Vector3 directionVector = indexObject.transform.position - pose.Position;
+        //float controlValue = 3;
 
-        xController.Control = controlValue;
+        //xController.Control = controlValue;
 
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Right, out pose))
@@ -55,6 +57,8 @@ public class CustomHandTracking : MonoBehaviour
         {
             indexObject.GetComponent<Renderer>().enabled = true;
             indexObject.transform.position = pose.Position;
+            xController.Control = pose.Position.x - ball.transform.position.x * .1f;
+            yController.Control = pose.Position.y - ball.transform.position.y * .1f;
             //GameObject index = GameObject.FindGameObjectWithTag("Player");
             //index.transform.position = Vector3.MoveTowards(transform.position,pose.Position, 0.03f*Time.deltaTime);
         }
