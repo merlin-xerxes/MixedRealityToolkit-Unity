@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Microsoft.MixedReality.Toolkit.Input;
 
 public class Logger : MonoBehaviour
 {
 
-    protected List<string> header;
+    protected string header;
+    
     void Start()
     {
         
     }
 
-    public List<string> GetHeader()
+    public string GetHeader()
     {
         return header;
     }

@@ -22,6 +22,8 @@ public class CustomHandTracking : MonoBehaviour
     public MjActuator yController;
 
     MixedRealityPose pose;
+
+    
     
     void Start()
     {
@@ -41,6 +43,8 @@ public class CustomHandTracking : MonoBehaviour
         ringObject.GetComponent<Renderer>().enabled = false;
         pinkyObject.GetComponent<Renderer>().enabled = false;
 
+        
+
         //Vector3 directionVector = indexObject.transform.position - pose.Position;
         //float controlValue = 3;
 
@@ -55,6 +59,7 @@ public class CustomHandTracking : MonoBehaviour
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out pose))
         {
+            
             indexObject.GetComponent<Renderer>().enabled = true;
             indexObject.transform.position = pose.Position;
             xController.Control = pose.Position.x - ball.transform.position.x * .1f;
