@@ -7,19 +7,27 @@ using Microsoft.MixedReality.Toolkit;
 
 public class ActivityLogger :Logger
 {
-    private List<Vector3> LHPosition = new List<Vector3>();
+    private List<string> manipulatedObjects = new List<string>();
 
-    private List<Vector3> RHPosition = new List<Vector3>();
+    private List<Vector3> manipulatedPosition = new List<Vector3>();
 
-    private const float PinchThreshold = 0.7f;
-    
+    private List<Quaternion> manipulatedRotation = new List<Quaternion>();
+
+    private List<Vector3> manipulatedScale = new List<Vector3>();
+
+    private const float PinchThreshold = 0.2f;
+
+    private GameObject interactedWith;
 
 
     private void Start()
     {
         Debug.Log(Handedness.Right.ToString());
-        header = "RHPosition; LHPosition";
+        header = "manipulatedObject; ManipulatedObjectPosition; ManipulatedObjectRotation; ManipulatedObjectScale";
+        interactedWith = null;
     }
+
+    
 
 
     public override List<string> GetData()
@@ -30,24 +38,43 @@ public class ActivityLogger :Logger
 
     public override void WriteData()
     {
-        Debug.Log("In HeadTrackingLogger.WriteData()");
+        Debug.Log("In ActivityTrackingLogger.WriteData()");
         //muss noch angepasst werden!
-        if(HandPoseUtils.IsIndexGrabbing(Handedness.Right) && HandPoseUtils.IsThumbGrabbing(Handedness.Right))
+        if(interactedWith == null)
         {
-            
-            Debug.Log("Pinching");
+            manipulatedObjects.Add("none");
+            manipulatedPosition.Add(Vector3.zero);
+            manipulatedRotation.Add(Quaternion.identity);
+            manipulatedScale.Add(Vector3.zero);
         }
+        else
+        {
+            manipulatedObjects.Add(interactedWith.name);
+            manipulatedPosition.Add(interactedWith.transform.position);
+            manipulatedRotation.Add(interactedWith.transform.rotation);
+            manipulatedScale.Add(interactedWith.transform.localScale);
+        }
+        
 
+    }
 
+    public void SetInteracted(GameObject obj)
+    {
+        interactedWith = obj;
+    }
+
+    public void ResetInteracted()
+    {
+        interactedWith = null;
     }
 
 
     public override List<string> Stringify()
     {
         List<string> stringData = new List<string>();
-        for (int i = 0; i < RHPosition.Count; i++)
+        for (int i = 0; i < manipulatedObjects.Count; i++)
         {
-            stringData.Add(RHPosition[i].ToString() + "; " + LHPosition[i].ToString());
+            stringData.Add(manipulatedObjects[i].ToString() + ";" + manipulatedPosition[i].ToString() + ";" + manipulatedRotation[i].ToString() + ";" + manipulatedScale[i].ToString());
         }
         return stringData;
     }

@@ -45,18 +45,22 @@ public class LoggingManager : MonoBehaviour
         }
     }
 
+    //Methode, die Zeile für Zeile, alle Daten aus den Loggern ausliest und in die loggerData Liste schreibt.
+    //Außerdem wird vor jede zeile ein Timestamp geschrieben.
     private void WriteLogData()
     {
-        Debug.Log("Logger[0] = " + logger[0].ToString());
-        string line = "";
+        //string line = System.DateTime.Now + ";";
+        string line;
         for(int i = 0; i < logger[0].GetData().Count; i++)
         {
+            line = loggerData[i];
             foreach (Logger log in logger)
             {
                 line += log.GetData()[i] + ";";
             }
-            loggerData.Add(line);
-            line = "";
+            //loggerData.Add(line);
+            loggerData[i] = line;
+            //line = System.DateTime.Now + ";";
         }
         
     }
@@ -74,7 +78,7 @@ public class LoggingManager : MonoBehaviour
                 }
 
                 TextWriter tw = new StreamWriter(logFile, true);
-                tw.WriteLine(allHeader);
+                tw.WriteLine("Timestamp; " + allHeader);
 
                 for(int i = 0; i < loggerData.Count; i++)
                 {
@@ -91,6 +95,7 @@ public class LoggingManager : MonoBehaviour
     {
         if (isLogging)
         {
+            loggerData.Add(System.DateTime.Now.ToString() + ";");
             foreach (Logger log in logger)
             {
                 log.WriteData();
