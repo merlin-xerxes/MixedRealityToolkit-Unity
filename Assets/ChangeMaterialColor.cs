@@ -6,7 +6,7 @@ public class ChangeMaterialColor : MonoBehaviour
 {
     
      public Color greencolor;
-     private ColliderCounter cc;
+     public ColliderCounter cc;
      private int incrementCounter = 0;
 
      void OnTriggerEnter(Collider other) {
@@ -16,7 +16,7 @@ public class ChangeMaterialColor : MonoBehaviour
              transform.GetComponent<Renderer>().material.color= greencolor;
              if (incrementCounter < 1)
              {
-                cc.increment();
+                cc.Increment();
                 incrementCounter++;
              }
          }
