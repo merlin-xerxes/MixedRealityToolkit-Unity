@@ -45,7 +45,7 @@ public class ActivityLogger :Logger
             manipulatedObjects.Add("none");
             manipulatedPosition.Add(Vector3.zero);
             manipulatedRotation.Add(Quaternion.identity);
-            manipulatedScale.Add(Vector3.zero);
+            manipulatedScale.Add(Vector3.one);
         }
         else
         {
