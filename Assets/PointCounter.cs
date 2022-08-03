@@ -7,14 +7,14 @@ public class PointCounter : MonoBehaviour
     public int pointCounter = 0;
 
     void OnTriggerEnter(Collider other) {
-        if(other.gameObject.name == "marble") {
-            pointCounter++;
+        if(other.gameObject.tag == "marble") {
+            pointCounter = 1;
         }
     }
 
     void OnTriggerExit(Collider other) {
-        if(other.gameObject.name == "marble") {
-            pointCounter--;
+        if(other.gameObject.tag == "marble") {
+            pointCounter = 0;
         }
     }
 }

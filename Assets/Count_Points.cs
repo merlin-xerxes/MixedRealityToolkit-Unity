@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Count_Points : MonoBehaviour
 {
-    List<PointCounter> counters = new List<PointCounter>();
-    public int totalPoints = 0;
+    public List<PointCounter> counters = new List<PointCounter>();
 
-    void Update() 
+    public int totalPoints;
+
+    public void CountPoints()
     {
-        foreach(PointCounter counter in counters) 
+        totalPoints = 0;
+        foreach (PointCounter counter in counters)
         {
             totalPoints += counter.pointCounter;
         }
-        Debug.Log(totalPoints);
+        
+            Debug.Log(totalPoints);
     }
 }

@@ -1,13 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Microsoft.MixedReality.Toolkit.SceneSystem;
 
 public class SceneChanger : MonoBehaviour
 {
-    
-    public void ChangeScene()
+    IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();
+    public async void ReloadCurrentScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+       // SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+      await sceneSystem.LoadContent();
+    }
+
+    public void LoadScenebyName(string name)
+    {
+        //  SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+      await sceneSystem.LoadContent(name);
+
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
     }
 }
