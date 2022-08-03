@@ -867,7 +867,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e869342c56e54acf989b2422b4b80dcc, type: 3}
-    m_FontSize: 60
+    m_FontSize: 56
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '3. Hit all the red marbles '
+  m_Text: 3. Turn all the red marbles green
 --- !u!222 &352419451
 CanvasRenderer:
   m_ObjectHideFlags: 0
