@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PointCounter : MonoBehaviour
 {
-    int pointCounter = 0;
+    public int pointCounter = 0;
 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.name == "marble") {

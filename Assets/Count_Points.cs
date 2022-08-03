@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Count_Points : MonoBehaviour
 {
-    list<PointCounter> counters = new list<PointCounter>();
-    private int totalPoints = 0;
+    List<PointCounter> counters = new List<PointCounter>();
+    public int totalPoints = 0;
 
     void Update() 
     {
@@ -13,6 +13,6 @@ public class Count_Points : MonoBehaviour
         {
             totalPoints += counter.pointCounter;
         }
-        Debug.log(totalPoints);
+        Debug.Log(totalPoints);
     }
 }
