@@ -373,7 +373,7 @@ namespace Microsoft.MixedReality.Toolkit.Input
         {
             using (TryRaisePokeUpPerfMarker.Auto())
             {
-                if (currentTouchableObjectDown != null)
+                if (currentTouchableObjectDown != null && Result != null)
                 {
                     Debug.Assert(Result.CurrentPointerTarget == currentTouchableObjectDown, "PokeUp will not be raised for correct object.");
 
