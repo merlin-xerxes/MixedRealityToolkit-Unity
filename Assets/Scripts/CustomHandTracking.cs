@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Microsoft.MixedReality.Toolkit.Utilities;
 using Microsoft.MixedReality.Toolkit.Input;
-//using Mujoco;
+using Mujoco;
 
 public class CustomHandTracking : MonoBehaviour
 {
@@ -18,8 +18,8 @@ public class CustomHandTracking : MonoBehaviour
 
     public GameObject ball;
 
-    //public MjActuator xController;
-    //public MjActuator yController;
+    public MjActuator xController;
+    public MjActuator zController;
 
     MixedRealityPose pose;
 
@@ -62,8 +62,8 @@ public class CustomHandTracking : MonoBehaviour
             
             indexObject.GetComponent<Renderer>().enabled = true;
             indexObject.transform.position = pose.Position;
-            //xController.Control = pose.Position.x - ball.transform.position.x * .1f;
-            //yController.Control = pose.Position.y - ball.transform.position.y * .1f;
+            xController.Control = pose.Position.x - ball.transform.position.x;
+            zController.Control = pose.Position.z - ball.transform.position.z;
             //GameObject index = GameObject.FindGameObjectWithTag("Player");
             //index.transform.position = Vector3.MoveTowards(transform.position,pose.Position, 0.03f*Time.deltaTime);
         }
