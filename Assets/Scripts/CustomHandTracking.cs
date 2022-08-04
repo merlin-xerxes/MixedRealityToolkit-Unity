@@ -24,7 +24,10 @@ public class CustomHandTracking : MonoBehaviour
     MixedRealityPose pose;
 
     
-    
+
+   
+
+
     void Start()
     {
         thumbObject = Instantiate(sphereMarker, this.transform);
@@ -37,11 +40,11 @@ public class CustomHandTracking : MonoBehaviour
     
     void Update()
     {
-        thumbObject.GetComponent<Renderer>().enabled = false;
-        indexObject.GetComponent<Renderer>().enabled = false;
-        middleObject.GetComponent<Renderer>().enabled = false;
-        ringObject.GetComponent<Renderer>().enabled = false;
-        pinkyObject.GetComponent<Renderer>().enabled = false;
+        //thumbObject.GetComponent<Renderer>().enabled = false;
+        //indexObject.GetComponent<Renderer>().enabled = false;
+        //middleObject.GetComponent<Renderer>().enabled = false;
+        //ringObject.GetComponent<Renderer>().enabled = false;
+        //pinkyObject.GetComponent<Renderer>().enabled = false;
 
         
 
@@ -53,36 +56,36 @@ public class CustomHandTracking : MonoBehaviour
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Right, out pose))
         {
-            thumbObject.GetComponent<Renderer>().enabled = true;
+            //thumbObject.GetComponent<Renderer>().enabled = true;
             thumbObject.transform.position = pose.Position;
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out pose))
         {
             
-            indexObject.GetComponent<Renderer>().enabled = true;
+            //indexObject.GetComponent<Renderer>().enabled = true;
             indexObject.transform.position = pose.Position;
-            xController.Control = pose.Position.x - ball.transform.position.x;
-            zController.Control = pose.Position.z - ball.transform.position.z;
+            //xController.Control = pose.Position.x - ball.transform.position.x;
+            //zController.Control = pose.Position.z - ball.transform.position.z;
             //GameObject index = GameObject.FindGameObjectWithTag("Player");
             //index.transform.position = Vector3.MoveTowards(transform.position,pose.Position, 0.03f*Time.deltaTime);
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Right, out pose))
         {
-            middleObject.GetComponent<Renderer>().enabled = true;
+            //middleObject.GetComponent<Renderer>().enabled = true;
             middleObject.transform.position = pose.Position;
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingTip, Handedness.Right, out pose))
         {
-            ringObject.GetComponent<Renderer>().enabled = true;
+            //ringObject.GetComponent<Renderer>().enabled = true;
             ringObject.transform.position = pose.Position;
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyTip, Handedness.Right, out pose))
         {
-            pinkyObject.GetComponent<Renderer>().enabled = true;
+            //pinkyObject.GetComponent<Renderer>().enabled = true;
             pinkyObject.transform.position = pose.Position;
         }
     }
