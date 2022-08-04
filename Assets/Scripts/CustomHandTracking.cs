@@ -15,11 +15,11 @@ public class CustomHandTracking : MonoBehaviour
     GameObject middleObject;
     GameObject ringObject;
     GameObject pinkyObject;
+    
 
-    public GameObject ball;
+   
 
-    public MjActuator xController;
-    public MjActuator zController;
+    
 
     MixedRealityPose pose;
 
@@ -32,9 +32,10 @@ public class CustomHandTracking : MonoBehaviour
     {
         thumbObject = Instantiate(sphereMarker, this.transform);
         indexObject = Instantiate(sphereMarker, this.transform);
-        middleObject = Instantiate(sphereMarker, this.transform);
-        ringObject = Instantiate(sphereMarker, this.transform);
-        pinkyObject = Instantiate(sphereMarker, this.transform);
+        //middleObject = Instantiate(sphereMarker, this.transform);
+        //ringObject = Instantiate(sphereMarker, this.transform);
+        //pinkyObject = Instantiate(sphereMarker, this.transform);
+        
     }
 
     
@@ -48,45 +49,41 @@ public class CustomHandTracking : MonoBehaviour
 
         
 
-        //Vector3 directionVector = indexObject.transform.position - pose.Position;
-        //float controlValue = 3;
-
-        //xController.Control = controlValue;
+        
 
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Right, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Both, out pose))
         {
             //thumbObject.GetComponent<Renderer>().enabled = true;
             thumbObject.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Both, out pose))
         {
             
             //indexObject.GetComponent<Renderer>().enabled = true;
             indexObject.transform.position = pose.Position;
-            //xController.Control = pose.Position.x - ball.transform.position.x;
-            //zController.Control = pose.Position.z - ball.transform.position.z;
-            //GameObject index = GameObject.FindGameObjectWithTag("Player");
-            //index.transform.position = Vector3.MoveTowards(transform.position,pose.Position, 0.03f*Time.deltaTime);
+            
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Right, out pose))
         {
             //middleObject.GetComponent<Renderer>().enabled = true;
-            middleObject.transform.position = pose.Position;
+            //middleObject.transform.position = pose.Position;
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingTip, Handedness.Right, out pose))
         {
             //ringObject.GetComponent<Renderer>().enabled = true;
-            ringObject.transform.position = pose.Position;
+            //ringObject.transform.position = pose.Position;
         }
 
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyTip, Handedness.Right, out pose))
         {
             //pinkyObject.GetComponent<Renderer>().enabled = true;
-            pinkyObject.transform.position = pose.Position;
+            //pinkyObject.transform.position = pose.Position;
         }
+
+        
     }
 }
