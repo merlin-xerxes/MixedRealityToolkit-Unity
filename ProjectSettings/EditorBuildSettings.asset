@@ -15,8 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/CubeSim.unity
     guid: 025c74ea285317a499aae8da09c81530
   - enabled: 1
+    path: Assets/Scenes/CubeScaling.unity
+    guid: 0d9f65728c750204fa6f3283abfa9ddd
+  - enabled: 1
     path: Assets/Scenes/MarbleScene.unity
     guid: 18281087d5bae464d94914fdefd5cee5
+  - enabled: 1
+    path: Assets/Scenes/CubePush.unity
+    guid: 1a649a617ecf18d4b833403f0367ea44
+  - enabled: 1
+    path: Assets/Scenes/Bowling.unity
+    guid: 97aaaa3845dce3c4cb3916467c609227
   - enabled: 1
     path: Assets/MRTK/Examples/Experimental/ExamplesHub/Scenes/MRTKExamplesHubMainMenu.unity
     guid: 63a00118e809c754f9c7911bb85d635f

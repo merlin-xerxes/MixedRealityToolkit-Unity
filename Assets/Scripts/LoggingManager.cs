@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class LoggingManager : MonoBehaviour
 {
@@ -31,7 +32,8 @@ public class LoggingManager : MonoBehaviour
                     + "/"
                     //+ System.DateTime.UtcNow.ToString(LOGFILE_NAME_TIME_FORMAT)
                     //+ System.DateTime.UtcNow.AddHours(2.0).ToString(LOGFILE_NAME_TIME_FORMAT)	// manually adjust time zone, e.g. + 2 UTC hours for summer time in location Stockholm/Sweden
-
+                    + SceneManager.GetActiveScene().name
+                    + "_"
                     + LOGFILE_NAMEBASE;
             File.Create(logFile);
 
@@ -103,7 +105,7 @@ public class LoggingManager : MonoBehaviour
         }
     }
 
-    private void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
         if (isLogging)
         {
