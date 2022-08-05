@@ -5,11 +5,15 @@ using UnityEngine;
 public class GoalCheckerBasketball : MonoBehaviour
 {
     public GameObject checkbox;
-    
+    public AudioClip pointMadeSound;
+    public AudioSource taskCompleteSound;
+    public ScoreCounter sc;
+    private int counter = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        taskCompleteSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,13 +27,15 @@ public class GoalCheckerBasketball : MonoBehaviour
         if (other.tag == "Basketball")
         {
             checkbox.SetActive(true);
-            Debug.Log("Point made");
-        }
-        
-    }
+            AudioSource.PlayClipAtPoint(pointMadeSound, transform.position, 1);
+            if (counter == 0)
+            {
+            taskCompleteSound.PlayDelayed(0.5f);
+            }
 
-    private void OnTriggerExit(Collider other) 
-    {
+            counter++;
+            sc.Increment();
+        }
         
     }
 }
