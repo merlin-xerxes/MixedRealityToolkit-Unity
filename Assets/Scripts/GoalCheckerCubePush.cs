@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class GoalCheckerCubePush : MonoBehaviour
 {
-    
 
-    
+    public GameObject checkmark;
+    public bool taskComplete = false;
+
+    private void Update()
+    {
+        if (taskComplete)
+        {
+            checkmark.SetActive(true);
+        }
+        else
+        {
+            checkmark.SetActive(false);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger erkennt was");
-        if(other.gameObject.tag == "cube")
+        Debug.Log("hallo");
+        if(other.tag == "cube")
         {
-            Debug.Log("abgeschlossen");
+            Debug.Log("istdrin");
+            taskComplete = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "cube")
+        {
+            taskComplete = false;
         }
     }
 }
