@@ -22,10 +22,10 @@ public class GoalCheckerCubePush : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hallo");
+        
         if(other.tag == "cube")
         {
-            Debug.Log("istdrin");
+            
             taskComplete = true;
         }
     }

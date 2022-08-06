@@ -6,21 +6,37 @@ using TMPro;
 public class GoalCheckerBowling : MonoBehaviour
 {
     public List<GameObject> pins = new List<GameObject>();
+    public List<Vector3> pinsPosition = new List<Vector3>();
     private int points;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI pointsText;
+    private Vector3 ballPos;
+    public GameObject checkmark;
     void Start()
     {
+        for(int i = 0; i < pins.Count; i++)
+        {
+            pinsPosition.Add(pins[i].transform.position);
+        }
+        ballPos = GameObject.FindGameObjectWithTag("bowlingBall").transform.position;
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if(points == 6)
+        {
+            checkmark.SetActive(true);
+        }
+        else
+        {
+            checkmark.SetActive(false);
+        }
     }
+
+
 
     public IEnumerator CountPoints()
-    {
+    {        
         yield return new WaitForSeconds(10);
         foreach (GameObject pin in pins)
         {
@@ -30,7 +46,11 @@ public class GoalCheckerBowling : MonoBehaviour
             }
         }
         Debug.Log("erreichte Punkte: " + points);
-        text.text += points;
+        pointsText.text = points.ToString();
+        points = 0;
+        ResetPins();
+        ResetBall();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,5 +59,24 @@ public class GoalCheckerBowling : MonoBehaviour
         {
             StartCoroutine(CountPoints());
         }
+    }
+
+    private void ResetPins()
+    {
+        for (int i = 0; i < pins.Count; i++)
+        {
+            pins[i].transform.rotation = Quaternion.identity;
+            pins[i].transform.position = pinsPosition[i];
+            pins[i].GetComponent<Rigidbody>().velocity = Vector3.zero;
+            pins[i].GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+        }
+    }
+
+    private void ResetBall()
+    {
+        GameObject.FindGameObjectWithTag("bowlingBall").transform.position = ballPos;
+        GameObject.FindGameObjectWithTag("bowlingBall").GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GameObject.FindGameObjectWithTag("bowlingBall").GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 }
