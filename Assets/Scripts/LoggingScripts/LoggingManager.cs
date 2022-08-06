@@ -27,11 +27,8 @@ public class LoggingManager : MonoBehaviour
         if (isLogging) {
             //Überprüft, ob der Speicherort existiert und erstellt gegenfalls den entsprechenden Ordner
             if (!Directory.Exists(LOGFILE_DIRECTORY)) Directory.CreateDirectory(LOGFILE_DIRECTORY);
-
             logFile = LOGFILE_DIRECTORY
-                    + "/"
-                    //+ System.DateTime.UtcNow.ToString(LOGFILE_NAME_TIME_FORMAT)
-                    //+ System.DateTime.UtcNow.AddHours(2.0).ToString(LOGFILE_NAME_TIME_FORMAT)	// manually adjust time zone, e.g. + 2 UTC hours for summer time in location Stockholm/Sweden
+                    + "/"         
                     + SceneManager.GetActiveScene().name
                     + "_"
                     + LOGFILE_NAMEBASE;
@@ -48,10 +45,9 @@ public class LoggingManager : MonoBehaviour
     }
 
     //Methode, die Zeile für Zeile, alle Daten aus den Loggern ausliest und in die loggerData Liste schreibt.
-    //Außerdem wird vor jede zeile ein Timestamp geschrieben.
     private void WriteLogData()
     {
-        //string line = System.DateTime.Now + ";";
+        
         string line;
         for(int i = 0; i < logger[0].GetData().Count; i++)
         {
@@ -60,9 +56,9 @@ public class LoggingManager : MonoBehaviour
             {
                 line += log.GetData()[i] + ";";
             }
-            //loggerData.Add(line);
+            
             loggerData[i] = line;
-            //line = System.DateTime.Now + ";";
+            
         }
         
     }
@@ -86,8 +82,6 @@ public class LoggingManager : MonoBehaviour
                 {
                     tw.WriteLine(loggerData[i]);
                 }
-
-
                 tw.Close();
             }
         }

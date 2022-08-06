@@ -15,14 +15,11 @@ public class ActivityLogger :Logger
 
     private List<Vector3> manipulatedScale = new List<Vector3>();
 
-    private const float PinchThreshold = 0.2f;
-
     private GameObject interactedWith;
 
 
     private void Start()
     {
-        Debug.Log(Handedness.Right.ToString());
         header = "manipulatedObject; ManipulatedObjectPosition; ManipulatedObjectRotation; ManipulatedObjectScale";
         interactedWith = null;
     }
@@ -39,7 +36,7 @@ public class ActivityLogger :Logger
     public override void WriteData()
     {
         Debug.Log("In ActivityTrackingLogger.WriteData()");
-        //muss noch angepasst werden!
+        
         if(interactedWith == null)
         {
             manipulatedObjects.Add("none");

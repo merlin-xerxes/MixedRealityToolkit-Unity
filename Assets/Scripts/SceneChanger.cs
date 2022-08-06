@@ -5,6 +5,7 @@ using Microsoft.MixedReality.Toolkit.SceneSystem;
 using Microsoft.MixedReality.Toolkit;
 using UnityEngine.SceneManagement;
 using System;
+using Mujoco;
 
 public class SceneChanger : MonoBehaviour
 {
@@ -19,8 +20,8 @@ public class SceneChanger : MonoBehaviour
     private float waitTimeInSecBeforeLoading = 0.25f;
 
     public void LoadScene()
-    {
-        LoadScene(SceneToBeLoaded);
+    {      
+        LoadScene(SceneToBeLoaded);     
     }
 
     public void LoadScene(string sceneName)

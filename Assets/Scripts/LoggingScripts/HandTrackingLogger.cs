@@ -14,8 +14,7 @@ public class HandTrackingLogger : Logger
 
 
     private void Start()
-    {
-        
+    {        
         header = "RHPosition; LHPosition";
     }
 
@@ -29,8 +28,7 @@ public class HandTrackingLogger : Logger
     public override void WriteData()
     {
         Debug.Log("In HeadTrackingLogger.WriteData()");
-        //muss noch angepasst werden!
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out pose))
         {
             RHPosition.Add(pose.Position);
         }
@@ -39,7 +37,7 @@ public class HandTrackingLogger : Logger
             RHPosition.Add(Vector3.zero);
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Left, out pose))
         {
             LHPosition.Add(pose.Position);
         }
