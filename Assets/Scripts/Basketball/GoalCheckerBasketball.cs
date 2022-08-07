@@ -9,17 +9,12 @@ public class GoalCheckerBasketball : MonoBehaviour
     public AudioSource taskCompleteSound;
     public ScoreCounter sc;
     private int counter = 0;
+    
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         taskCompleteSound = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -35,7 +30,6 @@ public class GoalCheckerBasketball : MonoBehaviour
 
             counter++;
             sc.Increment();
-        }
-        
+        } 
     }
 }
