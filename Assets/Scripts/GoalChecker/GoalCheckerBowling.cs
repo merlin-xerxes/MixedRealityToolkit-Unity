@@ -11,6 +11,9 @@ public class GoalCheckerBowling : MonoBehaviour
     public TextMeshProUGUI pointsText;
     private Vector3 ballPos;
     public GameObject checkmark;
+    public GameObject backWall;
+    public Material nicMaterial;
+    
     void Start()
     {
         for(int i = 0; i < pins.Count; i++)
@@ -26,6 +29,8 @@ public class GoalCheckerBowling : MonoBehaviour
         if(points == 10)
         {
             checkmark.SetActive(true);
+            backWall.GetComponent<MeshRenderer>().material = nicMaterial;
+            
         }
         else
         {

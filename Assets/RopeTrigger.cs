@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class RopeTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    GameObject checkmark;
+    private bool taskComplete = false;
+    
 
     // Update is called once per frame
     void Update()
     {
-
+        if (taskComplete)
+        {
+            checkmark.SetActive(true);
+        }
+        else
+        {
+            checkmark.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "Seilende")
         {
-            Debug.Log("fertig");
+            taskComplete = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Seilende")
+        {
+            taskComplete = false;
         }
     }
 }

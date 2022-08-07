@@ -17,7 +17,7 @@ public class EyeTrackingLogger : Logger
 
     private void Start()
     {
-        prov = GameObject.Find("Main Camera").GetComponent<GazeProvider>();
+        prov = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GazeProvider>();
         header = "GazeTargets; GazeOrigin; GazeDirections";   
     }
 

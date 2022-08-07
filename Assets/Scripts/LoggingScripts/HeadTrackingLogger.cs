@@ -14,7 +14,7 @@ public class HeadTrackingLogger : Logger
 
     private void Start()
     {
-        prov = GameObject.Find("Main Camera").GetComponent<GazeProvider>();
+        prov = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GazeProvider>();
         header = "HeadPosition; HeadDirection";
     }
 

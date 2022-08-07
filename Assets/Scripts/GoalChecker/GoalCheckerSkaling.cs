@@ -10,10 +10,7 @@ public class GoalCheckerSkaling : MonoBehaviour
     public GameObject cubeGoal;
 
     public float threshold;
-    void Start()
-    {
-        
-    }
+    
 
     
     void Update()
