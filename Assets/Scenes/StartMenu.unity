@@ -9444,7 +9444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4449b4ddd93e4c4590940df99f7d232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToBeLoaded: Marbles
+  SceneToBeLoaded: Marble Collision
   waitTimeInSecBeforeLoading: 0.25
 --- !u!1 &1089478497
 GameObject:
