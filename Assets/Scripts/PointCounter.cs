@@ -8,13 +8,13 @@ public class PointCounter : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "marble") {
-            pointCounter = 1;
+            pointCounter++;
         }
     }
 
     void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == "marble") {
-            pointCounter = 0;
+            pointCounter--;
         }
     }
 }
