@@ -20,7 +20,11 @@ public class SceneChanger : MonoBehaviour
     private float waitTimeInSecBeforeLoading = 0.25f;
 
     public void LoadScene()
-    {      
+    {
+        if(GameObject.Find("MjScene") != null)
+        {
+            //GameObject.Find("MjScene").SetActive(false);
+        }
         LoadScene(SceneToBeLoaded);     
     }
 

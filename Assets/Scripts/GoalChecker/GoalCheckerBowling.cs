@@ -23,7 +23,7 @@ public class GoalCheckerBowling : MonoBehaviour
 
     private void Update()
     {
-        if(points == 6)
+        if(points == 10)
         {
             checkmark.SetActive(true);
         }
@@ -36,7 +36,8 @@ public class GoalCheckerBowling : MonoBehaviour
 
 
     public IEnumerator CountPoints()
-    {        
+    {
+        points = 0;
         yield return new WaitForSeconds(10);
         foreach (GameObject pin in pins)
         {
@@ -47,7 +48,7 @@ public class GoalCheckerBowling : MonoBehaviour
         }
         Debug.Log("erreichte Punkte: " + points);
         pointsText.text = points.ToString();
-        points = 0;
+        
         ResetPins();
         ResetBall();
 

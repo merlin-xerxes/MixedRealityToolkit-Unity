@@ -19,7 +19,9 @@ public class GoalCheckerSkaling : MonoBehaviour
     void Update()
     {
 
-        if(cubeInteract.transform.localScale == (cubeGoal.transform.localScale + new Vector3(threshold, threshold, threshold)) || cubeInteract.transform.localScale == (cubeGoal.transform.localScale - new Vector3(threshold, threshold, threshold)))
+        if(cubeInteract.transform.localScale.x <= (cubeGoal.transform.localScale.x + threshold) && cubeInteract.transform.localScale.x >= (cubeGoal.transform.localScale.x - threshold)
+            && cubeInteract.transform.localScale.y <= (cubeGoal.transform.localScale.y + threshold) && cubeInteract.transform.localScale.y >= (cubeGoal.transform.localScale.y - threshold)
+            && cubeInteract.transform.localScale.z <= (cubeGoal.transform.localScale.z + threshold) && cubeInteract.transform.localScale.z >= (cubeGoal.transform.localScale.z - threshold))
         {
             checkboxCheck.SetActive(true);
         }
