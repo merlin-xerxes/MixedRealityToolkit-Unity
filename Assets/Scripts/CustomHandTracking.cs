@@ -15,11 +15,17 @@ public class CustomHandTracking : MonoBehaviour
     GameObject middleObject;
     GameObject ringObject;
     GameObject pinkyObject;
-    
+    GameObject thumbObject1;
+    GameObject indexObject1;
+    GameObject middleObject1;
+    GameObject ringObject1;
+    GameObject pinkyObject1;
+    GameObject palm;
 
-   
 
-    
+
+
+
 
     MixedRealityPose pose;
 
@@ -32,10 +38,17 @@ public class CustomHandTracking : MonoBehaviour
     {
         thumbObject = Instantiate(sphereMarker, this.transform);
         indexObject = Instantiate(sphereMarker, this.transform);
-        //middleObject = Instantiate(sphereMarker, this.transform);
-        //ringObject = Instantiate(sphereMarker, this.transform);
-        //pinkyObject = Instantiate(sphereMarker, this.transform);
-        
+        middleObject = Instantiate(sphereMarker, this.transform);
+        ringObject = Instantiate(sphereMarker, this.transform);
+        pinkyObject = Instantiate(sphereMarker, this.transform);
+
+        thumbObject1 = Instantiate(sphereMarker, this.transform);
+        indexObject1 = Instantiate(sphereMarker, this.transform);
+        middleObject1 = Instantiate(sphereMarker, this.transform);
+        ringObject1 = Instantiate(sphereMarker, this.transform);
+        pinkyObject1 = Instantiate(sphereMarker, this.transform);
+        palm = Instantiate(sphereMarker, this.transform);
+
     }
 
     
@@ -66,24 +79,70 @@ public class CustomHandTracking : MonoBehaviour
             
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Right, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Both, out pose))
         {
             //middleObject.GetComponent<Renderer>().enabled = true;
-            //middleObject.transform.position = pose.Position;
+            middleObject.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingTip, Handedness.Right, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingTip, Handedness.Both, out pose))
         {
             //ringObject.GetComponent<Renderer>().enabled = true;
-            //ringObject.transform.position = pose.Position;
+            ringObject.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyTip, Handedness.Right, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyTip, Handedness.Both, out pose))
         {
             //pinkyObject.GetComponent<Renderer>().enabled = true;
-            //pinkyObject.transform.position = pose.Position;
+            pinkyObject.transform.position = pose.Position;
         }
 
-        
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbDistalJoint, Handedness.Both, out pose))
+        {
+            //thumbObject.GetComponent<Renderer>().enabled = true;
+            thumbObject1.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexDistalJoint, Handedness.Both, out pose))
+        {
+
+            //indexObject.GetComponent<Renderer>().enabled = true;
+            indexObject1.transform.position = pose.Position;
+
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleDistalJoint, Handedness.Both, out pose))
+        {
+            //middleObject.GetComponent<Renderer>().enabled = true;
+            middleObject1.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingDistalJoint, Handedness.Both, out pose))
+        {
+            //ringObject.GetComponent<Renderer>().enabled = true;
+            ringObject1.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyDistalJoint, Handedness.Both, out pose))
+        {
+            //pinkyObject.GetComponent<Renderer>().enabled = true;
+            pinkyObject1.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyDistalJoint, Handedness.Both, out pose))
+        {
+            //pinkyObject.GetComponent<Renderer>().enabled = true;
+            pinkyObject1.transform.position = pose.Position;
+        }
+
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Both, out pose))
+        {
+            //pinkyObject.GetComponent<Renderer>().enabled = true;
+            palm.transform.position = pose.Position;
+        }
+
+
     }
 }

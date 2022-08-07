@@ -14,7 +14,11 @@
     "com.unity.xr.arfoundation": "4.2.3",
     "com.unity.xr.legacyinputhelpers": "2.1.9",
     "com.unity.xr.openxr": "1.4.2",
+<<<<<<< Updated upstream
     "org.mujoco": "file:C:/Users/vince/MuJoCo/mujoco-2.2.0/unity",
+=======
+    "org.mujoco": "file:C:/Users/alr_student/source/repos/mujoco-main/mujoco-main/unity",
+>>>>>>> Stashed changes
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

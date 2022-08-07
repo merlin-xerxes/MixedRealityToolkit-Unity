@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4640519943491972444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d5e253bad7b1264aa27b3955af72619, type: 3}
+  m_Script: {fileID: 11500000, guid: 8292b28ad7ee302409887cbc332bac13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6330201713141204660
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 8600146780529610711}
   - component: {fileID: 4196449984865248122}
   - component: {fileID: 3470321536977317800}
-  - component: {fileID: 9170223995314130754}
+  - component: {fileID: 864607550127808325}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -143,7 +143,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9170223995314130754
+--- !u!114 &864607550127808325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6330201713141204660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078163adc2da4c94b8919ac014a67bf6, type: 3}
+  m_Script: {fileID: 11500000, guid: e9f2af5806cb8434ea7e0584ce6fe92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShapeType: 0
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8935952096056560858}
-  - component: {fileID: 8935952096056560805}
+  - component: {fileID: 662650058542310281}
   m_Layer: 0
   m_Name: mocap_body
   m_TagString: Untagged
@@ -231,7 +231,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8935952096056560805
+--- !u!114 &662650058542310281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,6 +240,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8935952096056560804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb4d219b512957145b72e7b9ed21ca2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5576c15417e7deb4e9dd917d2fb6b681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

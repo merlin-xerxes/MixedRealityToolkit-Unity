@@ -176,7 +176,11 @@
       "url": "https://packages.unity.com"
     },
     "org.mujoco": {
+<<<<<<< Updated upstream
       "version": "file:C:/Users/vince/MuJoCo/mujoco-2.2.0/unity",
+=======
+      "version": "file:C:/Users/alr_student/source/repos/mujoco-main/mujoco-main/unity",
+>>>>>>> Stashed changes
       "depth": 0,
       "source": "local",
       "dependencies": {}
