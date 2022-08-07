@@ -139,3 +139,15 @@ WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Ti
 Tue Jul 26 12:01:35 2022
 WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0200.
 
+Sun Aug  7 18:27:29 2022
+WARNING: Pre-allocated constraint buffer is full. Increase njmax above 300. Time = 9.7000.
+
+Sun Aug  7 18:27:29 2022
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 9.7000.
+
+Sun Aug  7 18:27:29 2022
+WARNING: Pre-allocated constraint buffer is full. Increase njmax above 300. Time = 0.1200.
+
+Sun Aug  7 18:27:29 2022
+WARNING: Nan, Inf or huge value in QACC at DOF 42. The simulation is unstable. Time = 0.1200.
+
