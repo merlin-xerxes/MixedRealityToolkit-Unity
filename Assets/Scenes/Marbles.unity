@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 245348087}
   - component: {fileID: 245348086}
   m_Layer: 0
-  m_Name: Marble (3)
+  m_Name: Red Marble 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,12 +417,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245348085}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.493, z: 12.809}
-  m_LocalScale: {x: 0.6005061, y: 0.6005061, z: 0.6005061}
+  m_LocalPosition: {x: 2.6686e-10, y: -1.6551, z: 11.532}
+  m_LocalScale: {x: 0.3245015, y: 0.3245015, z: 0.3245015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246005363
 GameObject:
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 246005365}
   - component: {fileID: 246005364}
   m_Layer: 0
-  m_Name: Marble (2)
+  m_Name: Red Marble 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -620,12 +620,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246005363}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -2.493, z: 12.809}
-  m_LocalScale: {x: 0.6005061, y: 0.6005061, z: 0.6005061}
+  m_LocalPosition: {x: 1.0808, y: -1.6551, z: 11.532}
+  m_LocalScale: {x: 0.3245015, y: 0.3245015, z: 0.3245015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &352419448
 GameObject:
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 550183585}
   - component: {fileID: 550183594}
   m_Layer: 0
-  m_Name: Marble (1)
+  m_Name: Red Marble 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -969,12 +969,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550183584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -2.493, z: 12.809}
-  m_LocalScale: {x: 0.6005061, y: 0.6005061, z: 0.6005061}
+  m_LocalPosition: {x: -1.0808, y: -1.6551, z: 11.532}
+  m_LocalScale: {x: 0.3245015, y: 0.3245015, z: 0.3245015}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &550183594
 MonoBehaviour:
@@ -1163,8 +1163,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631601690}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.03, y: -2.636, z: 10.03}
-  m_LocalScale: {x: 43.096462, y: 44.17705, z: 115.237755}
+  m_LocalPosition: {x: -0.016211, y: -1.7324, z: 10.03}
+  m_LocalScale: {x: 23.288465, y: 23.872395, z: 62.27218}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1500,8 +1500,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366272647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.7189999, z: 10.03}
-  m_LocalScale: {x: 0.94697, y: 0.94697, z: 0.98442733}
+  m_LocalPosition: {x: 0, y: -1.7772, z: 10.03}
+  m_LocalScale: {x: 0.51172364, y: 0.51172364, z: 0.53196484}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1531,13 +1531,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399575923}
   m_LocalRotation: {x: -0, y: -0.009082558, z: -0, w: 0.99995875}
-  m_LocalPosition: {x: -5.285e-12, y: -0.67, z: 15.022}
-  m_LocalScale: {x: 10.990102, y: 7.4106946, z: 4.9556613}
+  m_LocalPosition: {x: -6.6542e-10, y: -0.67, z: 12.728}
+  m_LocalScale: {x: 5.9388313, y: 4.004591, z: 2.6779404}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1138118796}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: -1.041, z: 0}
 --- !u!1 &1449565352
 GameObject:
@@ -1557,7 +1557,7 @@ GameObject:
   - component: {fileID: 1449565361}
   - component: {fileID: 1449565360}
   m_Layer: 0
-  m_Name: Marble
+  m_Name: Orange Marble
   m_TagString: Marble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1648,8 +1648,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449565352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.51, z: 7.38}
-  m_LocalScale: {x: 0.4114183, y: 0.4114183, z: 0.4114183}
+  m_LocalPosition: {x: -7.2256e-10, y: -1.6643, z: 8.598}
+  m_LocalScale: {x: 0.22232221, y: 0.22232221, z: 0.22232221}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
