@@ -8,11 +8,7 @@ public class GoalCheckerBox: MonoBehaviour
     public GameObject checkboxCheck;
     private int counter = 0;
 
-    void Start()
-    {
-        
-        
-    }
+ 
 
     
     void Update()
