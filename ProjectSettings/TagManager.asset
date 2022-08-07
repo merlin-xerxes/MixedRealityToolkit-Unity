@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - cube
-  - bowlingBall
+  - Basketball
+  - Marble
   layers:
   - Default
   - TransparentFX

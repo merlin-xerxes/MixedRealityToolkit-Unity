@@ -1,26 +1,13 @@
 {
   "dependencies": {
-    "com.microsoft.mixedreality.openxr": {
-      "version": "file:MixedReality/com.microsoft.mixedreality.openxr-1.4.3.tgz",
+    "com.unity.collab-proxy": {
+      "version": "1.15.18",
       "depth": 0,
-      "source": "local-tarball",
+      "source": "registry",
       "dependencies": {
-        "com.unity.xr.arfoundation": "4.1.7",
-        "com.unity.xr.management": "4.2.0",
-        "com.unity.xr.openxr": "1.4.2"
-      }
-    },
-    "com.unity.2d.sprite": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
-    },
-    "com.unity.2d.tilemap": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
+        "com.unity.services.core": "1.0.1"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
@@ -63,11 +50,22 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.performance.profile-analyzer": {
-      "version": "1.1.1",
-      "depth": 0,
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.0.2",
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.services.core": {
+      "version": "1.4.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.unity.modules.androidjni": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.subsystemregistration": {
@@ -120,30 +118,19 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-    "com.unity.xr.arfoundation": {
-      "version": "4.2.3",
+    "com.unity.visualscripting": {
+      "version": "1.7.8",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.arsubsystems": "4.2.3",
-        "com.unity.xr.management": "4.0.1",
-        "com.unity.modules.particlesystem": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.xr.arsubsystems": {
-      "version": "4.2.3",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.subsystemregistration": "1.1.0",
-        "com.unity.xr.management": "4.0.1"
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.9",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.vr": "1.0.0",
@@ -174,16 +161,6 @@
         "com.unity.inputsystem": "1.3.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "org.mujoco": {
-<<<<<<< Updated upstream
-      "version": "file:C:/Users/vince/MuJoCo/mujoco-2.2.0/unity",
-=======
-      "version": "file:C:/Users/alr_student/source/repos/mujoco-main/mujoco-main/unity",
->>>>>>> Stashed changes
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

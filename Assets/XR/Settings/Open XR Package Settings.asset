@@ -289,6 +289,21 @@ MonoBehaviour:
   company: Microsoft
   priority: -100
   required: 0
+--- !u!114 &-784765226225887455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
+  m_Name: WebGL
+  m_EditorClassIdentifier: 
+  features: []
+  m_renderMode: 1
+  m_depthSubmissionMode: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,11 +316,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: Open XR Package Settings
   m_EditorClassIdentifier: 
-  Keys: 01000000070000000e000000
+  Keys: 01000000070000000e0000000d000000
   Values:
   - {fileID: 1856757283021154739}
   - {fileID: 3041062170422425257}
   - {fileID: 6641687846688034350}
+  - {fileID: -784765226225887455}
 --- !u!114 &253028083834027307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,20 +459,30 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
+<<<<<<< HEAD
   - {fileID: 5727289359054252413}
   - {fileID: 2105464931011071148}
   - {fileID: 3612008451553701077}
   - {fileID: 7874107681565426408}
   - {fileID: 6948029743336063833}
+=======
+  - {fileID: 2105464931011071148}
+  - {fileID: 3612008451553701077}
+>>>>>>> feature/Lucas
   - {fileID: 3329052513325725216}
   - {fileID: -1496729619884720964}
   - {fileID: 7202054392428531677}
   - {fileID: 2921265505575338738}
+<<<<<<< HEAD
   - {fileID: -4141532079846347783}
   - {fileID: -6338465060574422208}
   - {fileID: 8221619371905964654}
   - {fileID: -5789542151123179307}
   - {fileID: 2200153829370070068}
+=======
+  - {fileID: -6338465060574422208}
+  - {fileID: -5789542151123179307}
+>>>>>>> feature/Lucas
   - {fileID: 253028083834027307}
   - {fileID: 4448255141750655144}
   m_renderMode: 1
@@ -561,7 +587,10 @@ MonoBehaviour:
   features:
   - {fileID: -4280005981447358822}
   - {fileID: -8529897797541317523}
+<<<<<<< HEAD
   - {fileID: -6520907082584669988}
+=======
+>>>>>>> feature/Lucas
   - {fileID: 6784495710117836317}
   - {fileID: 5498605531206270314}
   - {fileID: 1464350636076875410}
@@ -842,17 +871,25 @@ MonoBehaviour:
   m_Name: WSA
   m_EditorClassIdentifier: 
   features:
+<<<<<<< HEAD
   - {fileID: 3783487498719653116}
   - {fileID: 5254504920540120652}
   - {fileID: 6603437527554521795}
   - {fileID: -3617932219817025855}
   - {fileID: 8903380374495157911}
+=======
+  - {fileID: 5254504920540120652}
+  - {fileID: 6603437527554521795}
+>>>>>>> feature/Lucas
   - {fileID: -5724994566427565441}
   - {fileID: 8574384418048728908}
   - {fileID: 4121476267057069850}
   - {fileID: 8069023026584844560}
+<<<<<<< HEAD
   - {fileID: 7238484419529490227}
   - {fileID: 1404765085648010893}
+=======
+>>>>>>> feature/Lucas
   - {fileID: 353479483613297265}
   - {fileID: -3683411583939251015}
   - {fileID: 1374506658000940474}

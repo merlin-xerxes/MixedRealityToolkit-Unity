@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/LoggingSystem.prefab.meta
 guid: 6201142b63a77e742999a296a72539e5
+========
+guid: af73ec6e4874eac4c806e3fd0240c5a5
+>>>>>>>> feature/Lucas:Assets/Prefabs/New Prefab.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

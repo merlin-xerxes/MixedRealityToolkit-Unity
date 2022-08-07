@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 44d700350ae3af146a4c52ed4bae293f
+=======
+guid: b9c2c59612591f348ade036c79379f09
+>>>>>>> feature/Lucas
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
