@@ -1190,6 +1190,11 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 265757715418927218, guid: 7dd2a4a7f3bac9245a65935ce6b9075d,
+        type: 3}
+      propertyPath: waitTimeInSecBeforeLoading
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dd2a4a7f3bac9245a65935ce6b9075d, type: 3}
 --- !u!4 &898209782 stripped
@@ -1229,7 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneToBeLoaded: CubeSim
-  waitTimeInSecBeforeLoading: 0.25
+  waitTimeInSecBeforeLoading: 1
 --- !u!1 &995159063
 GameObject:
   m_ObjectHideFlags: 0

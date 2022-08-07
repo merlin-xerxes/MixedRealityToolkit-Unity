@@ -1664,6 +1664,7 @@ GameObject:
   - component: {fileID: 180162083}
   - component: {fileID: 180162082}
   - component: {fileID: 180162081}
+  - component: {fileID: 180162088}
   m_Layer: 0
   m_Name: PressableButton
   m_TagString: Untagged
@@ -1869,10 +1870,10 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 180162088}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: LoadScenebyName
-        m_Mode: 5
+        m_MethodName: LoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2177,6 +2178,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.032, y: 0.032, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &180162088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180162079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4449b4ddd93e4c4590940df99f7d232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneToBeLoaded: MarbleScene
+  waitTimeInSecBeforeLoading: 0.25
 --- !u!1 &194068394
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,7 +3767,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 743090867}
-  - {fileID: 1158977855}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8619,80 +8633,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012070843}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1030182941
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 360903825}
-    m_Modifications:
-    - target: {fileID: 8470536722097862322, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_Name
-      value: LoggingSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8470536722801062261, guid: 6201142b63a77e742999a296a72539e5,
-        type: 3}
-      propertyPath: isLogging
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6201142b63a77e742999a296a72539e5, type: 3}
 --- !u!1 &1053125258
 GameObject:
   m_ObjectHideFlags: 0
@@ -8978,6 +8918,7 @@ GameObject:
   - component: {fileID: 1070550212}
   - component: {fileID: 1070550211}
   - component: {fileID: 1070550210}
+  - component: {fileID: 1070550217}
   m_Layer: 0
   m_Name: PressableButton (1)
   m_TagString: Untagged
@@ -9183,9 +9124,9 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Increment
+      - m_Target: {fileID: 1070550217}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9491,6 +9432,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.032, y: 0.032, z: 0.016}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1070550217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070550208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4449b4ddd93e4c4590940df99f7d232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneToBeLoaded: Marbles
+  waitTimeInSecBeforeLoading: 0.25
 --- !u!1 &1089478497
 GameObject:
   m_ObjectHideFlags: 0
@@ -9845,12 +9800,6 @@ Transform:
   m_Father: {fileID: 800024217}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1158977855 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8470536722097862325, guid: 6201142b63a77e742999a296a72539e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1030182941}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1201147482
 GameObject:
   m_ObjectHideFlags: 0
@@ -11401,7 +11350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Simulation 6
+  m_text: Marble collision
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a84f857bec7e7345843ae29404c57ce, type: 2}
   m_sharedMaterial: {fileID: 21202819797275496, guid: 6a84f857bec7e7345843ae29404c57ce,
@@ -12699,7 +12648,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1572130048}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LoggingManager, Assembly-CSharp
         m_MethodName: OnApplicationQuit
         m_Mode: 1
@@ -13423,18 +13372,6 @@ Transform:
   m_Father: {fileID: 1070550209}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1572130048 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8470536722801062261, guid: 6201142b63a77e742999a296a72539e5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1030182941}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89db8c0d27ef6024695bbd36f64230ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1610344790
 GameObject:
   m_ObjectHideFlags: 0

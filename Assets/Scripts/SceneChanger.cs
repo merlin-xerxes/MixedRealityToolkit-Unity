@@ -21,10 +21,7 @@ public class SceneChanger : MonoBehaviour
 
     public void LoadScene()
     {
-        if(GameObject.Find("MjScene") != null)
-        {
-            //GameObject.Find("MjScene").SetActive(false);
-        }
+        
         LoadScene(SceneToBeLoaded);     
     }
 
