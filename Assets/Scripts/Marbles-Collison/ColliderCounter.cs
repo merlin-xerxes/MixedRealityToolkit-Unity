@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ColliderCounter : MonoBehaviour
 {
     private int collideCounter = 0;
-    public GoalTracker gc;
+    public GoalTracker gt;
     public Text myUitext;
 
     public void Start() {
@@ -19,12 +19,7 @@ public class ColliderCounter : MonoBehaviour
     myUitext.text = collideCounter + "";
         if(collideCounter == 3)
         {
-            UpdateGoalTracker();
+            gt.Complete();
         }
     }
-    public void UpdateGoalTracker()
-    {
-        gc.Complete();
-    }
-
 }
