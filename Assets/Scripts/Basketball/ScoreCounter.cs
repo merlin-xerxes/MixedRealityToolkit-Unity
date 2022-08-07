@@ -7,7 +7,7 @@ public class ScoreCounter : MonoBehaviour
 {
     private int scoreCounter = 0;
     public Text myUitext;
-    [SerializeField] private Image nicKopf0, nicKopf1, nicKopf2, nicKopf3, nicKopf4;
+    [SerializeField] public Image nicKopf0, nicKopf1, nicKopf2, nicKopf3, nicKopf4;
     public AudioClip nic0Sound, nic1Sound, nic2Sound, nic3Sound, nic4Sound;
 
     public void Start() {
