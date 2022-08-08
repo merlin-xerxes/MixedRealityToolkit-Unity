@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class ScoreCounter : MonoBehaviour
 {
     private int scoreCounter = 0;
-    public Text myUitext;
+    public Text scoreText;
     [SerializeField] public Image nicKopf0, nicKopf1, nicKopf2, nicKopf3, nicKopf4;
     public AudioClip nic0Sound, nic1Sound, nic2Sound, nic3Sound, nic4Sound;
 
     public void Start() {
-        myUitext.text = "Score:  " + scoreCounter;
+        scoreText.text = "Score:  " + scoreCounter;
     }
     public void Increment()
     {
     scoreCounter++;
-    myUitext.text = "Score:  " + scoreCounter;
+    scoreText.text = "Score:  " + scoreCounter;
     if(scoreCounter == 10)
     {
         nicKopf0.enabled = true;

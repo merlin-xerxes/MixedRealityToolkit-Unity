@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class ObjectResetter : MonoBehaviour
 {
-    public GameObject ball;
+    public GameObject obj;
     public Vector3 startPos;
     public Quaternion startRot;
 
     public void Start() 
     {
         
-        startPos = ball.transform.position;
-        startRot = ball.transform.rotation;
+        startPos = obj.transform.position;
+        startRot = obj.transform.rotation;
     }
 
     public void ResetObject()
     {
-        ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        ball.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-        ball.transform.position = startPos;
-        ball.transform.rotation = startRot;
+        obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        obj.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        obj.transform.position = startPos;
+        obj.transform.rotation = startRot;
     }
 }
