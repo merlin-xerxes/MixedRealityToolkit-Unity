@@ -35,7 +35,7 @@ public class ActivityLogger :Logger
 
     public override void WriteData()
     {
-        Debug.Log("In ActivityTrackingLogger.WriteData()");
+        //Debug.Log("In ActivityTrackingLogger.WriteData()");
         
         if(interactedWith == null)
         {

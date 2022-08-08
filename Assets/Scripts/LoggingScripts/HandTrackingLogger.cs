@@ -27,7 +27,7 @@ public class HandTrackingLogger : Logger
 
     public override void WriteData()
     {
-        Debug.Log("In HeadTrackingLogger.WriteData()");
+        //Debug.Log("In HeadTrackingLogger.WriteData()");
         if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out pose))
         {
             RHPosition.Add(pose.Position);

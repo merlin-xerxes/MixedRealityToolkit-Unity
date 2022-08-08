@@ -27,7 +27,7 @@ public class HeadTrackingLogger : Logger
 
     public override void WriteData()
     {
-        Debug.Log("In HeadTrackingLogger.WriteData()");
+        //Debug.Log("In HeadTrackingLogger.WriteData()");
         position.Add(prov.GazeOrigin);
         direction.Add(prov.HeadMovementDirection);
     }

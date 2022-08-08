@@ -2445,6 +2445,11 @@ PrefabInstance:
       propertyPath: isLogging
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8470536722801062261, guid: 6201142b63a77e742999a296a72539e5,
+        type: 3}
+      propertyPath: loggingTimeStep
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6201142b63a77e742999a296a72539e5, type: 3}
 --- !u!4 &1482446717 stripped

@@ -151,3 +151,6 @@ WARNING: Pre-allocated constraint buffer is full. Increase njmax above 300. Time
 Sun Aug  7 18:27:29 2022
 WARNING: Nan, Inf or huge value in QACC at DOF 42. The simulation is unstable. Time = 0.1200.
 
+Mon Aug  8 16:05:08 2022
+WARNING: Pre-allocated constraint buffer is full. Increase njmax above 300. Time = 49.0000.
+

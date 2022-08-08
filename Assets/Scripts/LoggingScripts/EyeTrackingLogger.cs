@@ -30,7 +30,7 @@ public class EyeTrackingLogger : Logger
     
     public override void WriteData()
     {
-        Debug.Log("In EyeTrackingLogger.WriteData()");
+       // Debug.Log("In EyeTrackingLogger.WriteData()");
         
         gazeDirections.Add(prov.GazeDirection);
         gazeOrigins.Add(prov.GazeOrigin);
