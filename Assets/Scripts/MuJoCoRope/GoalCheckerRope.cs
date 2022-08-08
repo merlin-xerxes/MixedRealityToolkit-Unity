@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RopeTrigger : MonoBehaviour
+public class GoalCheckerRope : MonoBehaviour
 {
     public GameObject checkmark;
     private bool taskComplete = false;

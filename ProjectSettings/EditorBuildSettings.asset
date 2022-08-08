@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CubePush.unity
     guid: 1a649a617ecf18d4b833403f0367ea44
   - enabled: 1
-    path: Assets/Scenes/MuJoCoTest.unity
+    path: Assets/Scenes/MuJoCoRope.unity
     guid: 8e1fea82106bce54dbfd219dd07622e0
   - enabled: 1
     path: Assets/Scenes/Marble Collision.unity
