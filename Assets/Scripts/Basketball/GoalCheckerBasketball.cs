@@ -21,15 +21,14 @@ public class GoalCheckerBasketball : MonoBehaviour
     {
         if (other.tag == "Basketball")
         {
-            checkbox.SetActive(true);
-            AudioSource.PlayClipAtPoint(pointMadeSound, transform.position, 1);
+        AudioSource.PlayClipAtPoint(pointMadeSound, transform.position, 1);
             if (counter == 0)
             {
+            checkbox.SetActive(true);
             taskCompleteSound.PlayDelayed(0.5f);
-            }
-
             counter++;
-            sc.Increment();
+            }
+        sc.Increment();
         } 
     }
 }
