@@ -12,5 +12,4 @@ public class GoalTracker : MonoBehaviour
         checkbox.SetActive(true);
         AudioSource.PlayClipAtPoint(taskCompleteSound, transform.position, 1);
     }
-
 }
