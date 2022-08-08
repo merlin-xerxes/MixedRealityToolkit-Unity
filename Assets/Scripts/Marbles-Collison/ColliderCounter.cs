@@ -7,16 +7,17 @@ public class ColliderCounter : MonoBehaviour
 {
     private int collideCounter = 0;
     public GoalTracker gt;
-    public Text myUitext;
+    public Text counterText;
 
-    public void Start() {
-        myUitext.text = "0";
+    private void Start() 
+    {
+        counterText.text = "Counter:  " + collideCounter + "/3";
     }
     
     public void Increment()
     {
-    collideCounter++;
-    myUitext.text = collideCounter + "";
+        collideCounter++;
+        counterText.text = "Counter:  " + collideCounter + "/3";
         if(collideCounter == 3)
         {
             gt.Complete();
