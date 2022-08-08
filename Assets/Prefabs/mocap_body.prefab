@@ -195,7 +195,7 @@ MonoBehaviour:
       Conaffinity: 1
       Group: 0
     Friction:
-      Sliding: 1
+      Sliding: 10
       Torsional: 0.005
       Rolling: 0.0001
 --- !u!1 &8935952096056560804

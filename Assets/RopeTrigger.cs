@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RopeTrigger : MonoBehaviour
 {
-    GameObject checkmark;
+    public GameObject checkmark;
     private bool taskComplete = false;
     
 
