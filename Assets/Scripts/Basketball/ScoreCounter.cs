@@ -13,34 +13,39 @@ public class ScoreCounter : MonoBehaviour
     public void Start() {
         scoreText.text = "Score:  " + scoreCounter;
     }
+    
     public void Increment()
     {
     scoreCounter++;
     scoreText.text = "Score:  " + scoreCounter;
-    if(scoreCounter == 10)
+    playEasterEgg();
+    }
+
+    private void playEasterEgg()
     {
+    switch(scoreCounter){
+        case 10:
         nicKopf0.enabled = true;
         AudioSource.PlayClipAtPoint(nic0Sound, transform.position, 1);
-    }
-    if(scoreCounter == 25)
-    {
+        break;
+        case 25:
         nicKopf1.enabled = true;
         AudioSource.PlayClipAtPoint(nic1Sound, transform.position, 1);
-    }
-    if(scoreCounter == 50)
-    {
+        break;
+        case 50:
         nicKopf2.enabled = true;
         AudioSource.PlayClipAtPoint(nic2Sound, transform.position, 1);
-    }
-    if(scoreCounter == 75)
-    {
+        break;
+        case 75:
         nicKopf3.enabled = true;
         AudioSource.PlayClipAtPoint(nic3Sound, transform.position, 1);
-    }
-    if(scoreCounter == 100)
-    {
+        break;
+        case 100:
         nicKopf4.enabled = true;
         AudioSource.PlayClipAtPoint(nic4Sound, transform.position, 1);
+        break;
+        default:
+        break;
     }
     }
 }
