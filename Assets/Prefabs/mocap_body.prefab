@@ -87,7 +87,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6330201713141204660}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &4196449984865248122
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6330201713141204660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -141,7 +141,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &864607550127808325
 MonoBehaviour:
@@ -155,9 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078163adc2da4c94b8919ac014a67bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShapeType: 0
+  ShapeType: 4
   Sphere:
-    Radius: 0.5
+    Radius: 0.2
   Capsule:
     Radius: 0.5
     HalfHeight: 0.5
@@ -165,7 +165,7 @@ MonoBehaviour:
     Radius: 0.5
     HalfHeight: 1
   Box:
-    Extents: {x: 0.5, y: 0.5, z: 0.5}
+    Extents: {x: 0.2, y: 0.2, z: 0.2}
   Ellipsoid:
     Radiuses: {x: 0.5, y: 0.5, z: 0.5}
   Plane:
@@ -195,7 +195,7 @@ MonoBehaviour:
       Conaffinity: 1
       Group: 0
     Friction:
-      Sliding: 10
+      Sliding: 1
       Torsional: 0.005
       Rolling: 0.0001
 --- !u!1 &8935952096056560804

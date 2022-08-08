@@ -10,17 +10,30 @@ public class CustomHandTracking : MonoBehaviour
 {
     public GameObject sphereMarker;
 
-    GameObject thumbObject;
-    GameObject indexObject;
-    GameObject middleObject;
-    GameObject ringObject;
-    GameObject pinkyObject;
-    GameObject thumbObjectDostal;
-    GameObject indexObjectDostal;
-    GameObject middleObjectDostal;
-    GameObject ringObjectDostal;
-    GameObject pinkyObjectDostal;
-    GameObject palm;
+    GameObject thumbObjectR;
+    GameObject indexObjectR;
+    GameObject middleObjectR;
+    GameObject ringObjectR;
+    GameObject pinkyObjectR;
+    GameObject thumbObjectDostalR;
+    GameObject indexObjectDostalR;
+    GameObject middleObjectDostalR;
+    GameObject ringObjectDostalR;
+    GameObject pinkyObjectDostalR;
+    GameObject palmR;
+
+
+    GameObject thumbObjectL;
+    GameObject indexObjectL;
+    GameObject middleObjectL;
+    GameObject ringObjectL;
+    GameObject pinkyObjectL;
+    GameObject thumbObjectDostalL;
+    GameObject indexObjectDostalL;
+    GameObject middleObjectDostalL;
+    GameObject ringObjectDostalL;
+    GameObject pinkyObjectDostalL;
+    GameObject palmL;
 
 
 
@@ -36,111 +49,190 @@ public class CustomHandTracking : MonoBehaviour
 
     void Start()
     {
-        thumbObject = Instantiate(sphereMarker, this.transform);
-        indexObject = Instantiate(sphereMarker, this.transform);
-        middleObject = Instantiate(sphereMarker, this.transform);
-        ringObject = Instantiate(sphereMarker, this.transform);
-        pinkyObject = Instantiate(sphereMarker, this.transform);
+        thumbObjectR = Instantiate(sphereMarker, this.transform);
+        indexObjectR = Instantiate(sphereMarker, this.transform);
+        middleObjectR = Instantiate(sphereMarker, this.transform);
+        ringObjectR = Instantiate(sphereMarker, this.transform);
+        pinkyObjectR = Instantiate(sphereMarker, this.transform);
 
-        thumbObjectDostal = Instantiate(sphereMarker, this.transform);
-        indexObjectDostal = Instantiate(sphereMarker, this.transform);
-        middleObjectDostal = Instantiate(sphereMarker, this.transform);
-        ringObjectDostal = Instantiate(sphereMarker, this.transform);
-        pinkyObjectDostal = Instantiate(sphereMarker, this.transform);
-        palm = Instantiate(sphereMarker, this.transform);
+        thumbObjectDostalR = Instantiate(sphereMarker, this.transform);
+        indexObjectDostalR = Instantiate(sphereMarker, this.transform);
+        middleObjectDostalR = Instantiate(sphereMarker, this.transform);
+        ringObjectDostalR = Instantiate(sphereMarker, this.transform);
+        pinkyObjectDostalR = Instantiate(sphereMarker, this.transform);
+        palmR = Instantiate(sphereMarker, this.transform);
+
+
+        thumbObjectL = Instantiate(sphereMarker, this.transform);
+        indexObjectL = Instantiate(sphereMarker, this.transform);
+        middleObjectL = Instantiate(sphereMarker, this.transform);
+        ringObjectL = Instantiate(sphereMarker, this.transform);
+        pinkyObjectL = Instantiate(sphereMarker, this.transform);
+
+        thumbObjectDostalL = Instantiate(sphereMarker, this.transform);
+        indexObjectDostalL = Instantiate(sphereMarker, this.transform);
+        middleObjectDostalL = Instantiate(sphereMarker, this.transform);
+        ringObjectDostalL = Instantiate(sphereMarker, this.transform);
+        pinkyObjectDostalL = Instantiate(sphereMarker, this.transform);
+        palmL = Instantiate(sphereMarker, this.transform);
 
     }
 
     
     void Update()
     {
-        //thumbObject.GetComponent<Renderer>().enabled = false;
-        //indexObject.GetComponent<Renderer>().enabled = false;
-        //middleObject.GetComponent<Renderer>().enabled = false;
-        //ringObject.GetComponent<Renderer>().enabled = false;
-        //pinkyObject.GetComponent<Renderer>().enabled = false;
+        
 
         
 
         
 
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Right, out pose))
         {
             //thumbObject.GetComponent<Renderer>().enabled = true;
-            thumbObject.transform.position = pose.Position;
+            thumbObjectR.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Right, out pose))
         {
             
             //indexObject.GetComponent<Renderer>().enabled = true;
-            indexObject.transform.position = pose.Position;
+            indexObjectR.transform.position = pose.Position;
             
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Right, out pose))
         {
             //middleObject.GetComponent<Renderer>().enabled = true;
-            middleObject.transform.position = pose.Position;
+            middleObjectR.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingTip, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingTip, Handedness.Right, out pose))
         {
             //ringObject.GetComponent<Renderer>().enabled = true;
-            ringObject.transform.position = pose.Position;
+            ringObjectR.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyTip, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyTip, Handedness.Right, out pose))
         {
             //pinkyObject.GetComponent<Renderer>().enabled = true;
-            pinkyObject.transform.position = pose.Position;
+            pinkyObjectR.transform.position = pose.Position;
         }
 
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbDistalJoint, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbProximalJoint, Handedness.Right, out pose))
         {
             //thumbObject.GetComponent<Renderer>().enabled = true;
-            thumbObjectDostal.transform.position = pose.Position;
+            thumbObjectDostalR.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexDistalJoint, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexMiddleJoint, Handedness.Right, out pose))
         {
 
             //indexObject.GetComponent<Renderer>().enabled = true;
-            indexObjectDostal.transform.position = pose.Position;
+            indexObjectDostalR.transform.position = pose.Position;
 
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleDistalJoint, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleMiddleJoint, Handedness.Right, out pose))
         {
             //middleObject.GetComponent<Renderer>().enabled = true;
-            middleObjectDostal.transform.position = pose.Position;
+            middleObjectDostalR.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingDistalJoint, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingMiddleJoint, Handedness.Right, out pose))
         {
             //ringObject.GetComponent<Renderer>().enabled = true;
-            ringObjectDostal.transform.position = pose.Position;
+            ringObjectDostalR.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyDistalJoint, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyMiddleJoint, Handedness.Right, out pose))
         {
             //pinkyObject.GetComponent<Renderer>().enabled = true;
-            pinkyObjectDostal.transform.position = pose.Position;
+            pinkyObjectDostalR.transform.position = pose.Position;
         }
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyDistalJoint, Handedness.Both, out pose))
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Right, out pose))
         {
             //pinkyObject.GetComponent<Renderer>().enabled = true;
-            pinkyObjectDostal.transform.position = pose.Position;
+            palmR.transform.position = pose.Position;
         }
 
 
-        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Both, out pose))
+
+        //--------------------------------------------------------------
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbTip, Handedness.Left, out pose))
+        {
+            //thumbObject.GetComponent<Renderer>().enabled = true;
+            thumbObjectL.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexTip, Handedness.Left, out pose))
+        {
+
+            //indexObject.GetComponent<Renderer>().enabled = true;
+            indexObjectL.transform.position = pose.Position;
+
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleTip, Handedness.Left, out pose))
+        {
+            //middleObject.GetComponent<Renderer>().enabled = true;
+            middleObjectL.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingTip, Handedness.Left, out pose))
+        {
+            //ringObject.GetComponent<Renderer>().enabled = true;
+            ringObjectL.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyTip, Handedness.Left, out pose))
         {
             //pinkyObject.GetComponent<Renderer>().enabled = true;
-            palm.transform.position = pose.Position;
+            pinkyObjectL.transform.position = pose.Position;
+        }
+
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.ThumbProximalJoint, Handedness.Left, out pose))
+        {
+            //thumbObject.GetComponent<Renderer>().enabled = true;
+            thumbObjectDostalL.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.IndexMiddleJoint, Handedness.Left, out pose))
+        {
+
+            //indexObject.GetComponent<Renderer>().enabled = true;
+            indexObjectDostalL.transform.position = pose.Position;
+
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.MiddleMiddleJoint, Handedness.Left, out pose))
+        {
+            //middleObject.GetComponent<Renderer>().enabled = true;
+            middleObjectDostalL.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.RingMiddleJoint, Handedness.Left, out pose))
+        {
+            //ringObject.GetComponent<Renderer>().enabled = true;
+            ringObjectDostalL.transform.position = pose.Position;
+        }
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.PinkyMiddleJoint, Handedness.Left, out pose))
+        {
+            //pinkyObject.GetComponent<Renderer>().enabled = true;
+            pinkyObjectDostalL.transform.position = pose.Position;
+        }
+
+
+        if (HandJointUtils.TryGetJointPose(TrackedHandJoint.Palm, Handedness.Left, out pose))
+        {
+            //pinkyObject.GetComponent<Renderer>().enabled = true;
+            palmL.transform.position = pose.Position;
         }
 
 
