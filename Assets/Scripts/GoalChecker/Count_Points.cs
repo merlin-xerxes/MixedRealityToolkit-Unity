@@ -17,8 +17,6 @@ public class Count_Points : MonoBehaviour
         {
             totalPoints += counter.pointCounter;
         }
-        
-            Debug.Log(totalPoints);
     }
 
     void Update() {

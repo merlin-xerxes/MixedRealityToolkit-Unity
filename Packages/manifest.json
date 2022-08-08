@@ -11,7 +11,7 @@
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.8",
     "com.unity.xr.openxr": "1.4.2",
-    "org.mujoco": "file:C:/Users/tjaar/mujoco-main/unity",
+    "org.mujoco": "file:C:/Users/vince/MuJoCo/mujoco-2.2.0/unity",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",

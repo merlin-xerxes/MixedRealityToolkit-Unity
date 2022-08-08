@@ -194,7 +194,7 @@
       "url": "https://packages.unity.com"
     },
     "org.mujoco": {
-      "version": "file:C:/Users/tjaar/mujoco-main/unity",
+      "version": "file:C:/Users/vince/MuJoCo/mujoco-2.2.0/unity",
       "depth": 0,
       "source": "local",
       "dependencies": {}
