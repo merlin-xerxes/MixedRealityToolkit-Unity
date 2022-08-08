@@ -8,7 +8,7 @@ public class GoalCheckerBasketball : MonoBehaviour
     public AudioClip pointMadeSound;
     public AudioSource taskCompleteSound;
     public ScoreCounter sc;
-    private int counter = 0;
+    private bool taskCompleted = false;
     
 
     // Start is called before the first frame update
@@ -22,11 +22,11 @@ public class GoalCheckerBasketball : MonoBehaviour
         if (other.tag == "Basketball")
         {
         AudioSource.PlayClipAtPoint(pointMadeSound, transform.position, 1);
-            if (counter == 0)
+            if (!taskCompleted)
             {
             checkbox.SetActive(true);
             taskCompleteSound.PlayDelayed(0.5f);
-            counter++;
+            taskCompleted = true;
             }
         sc.Increment();
         } 

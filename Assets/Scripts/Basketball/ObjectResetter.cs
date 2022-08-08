@@ -8,9 +8,8 @@ public class ObjectResetter : MonoBehaviour
     public Vector3 startPos;
     public Quaternion startRot;
 
-    public void Start() 
+    private void Start() 
     {
-        
         startPos = obj.transform.position;
         startRot = obj.transform.rotation;
     }
