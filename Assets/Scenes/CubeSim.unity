@@ -3124,8 +3124,9 @@ PrefabInstance:
       value: '<size=42><b>Cube Simulation</b></size>
 
 
-        For this simulation
-        we''llinteract with cubes. Pleas grab a cube and place it on the other table.'
+        In this simulation
+        we will interact with cubes. Please grab the cubes and place them next to
+        each other on the other table.'
       objectReference: {fileID: 0}
     - target: {fileID: 2113875699234556495, guid: 18470d71939382448be2ecd06efa9662,
         type: 3}

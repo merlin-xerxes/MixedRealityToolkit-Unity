@@ -3253,8 +3253,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<size=42><b>Rolling Ball</b></size>
 
-    Rolle the red Ball on the target,
-    then near you get to the center than more points you get
+    Roll the red balls on the target.
+
+    You
+    will gain more points the closer you roll them to the center of the target.
 
 
 '
