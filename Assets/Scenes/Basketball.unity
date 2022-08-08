@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 114323982}
   - component: {fileID: 114323981}
   m_Layer: 0
-  m_Name: Nic4
+  m_Name: Image4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 160555333}
   - component: {fileID: 160555332}
   m_Layer: 0
-  m_Name: Nic0
+  m_Name: Image0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 244173051}
   - component: {fileID: 244173050}
   m_Layer: 0
-  m_Name: Nic2
+  m_Name: Image2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 591491021}
   - component: {fileID: 591491022}
   m_Layer: 0
-  m_Name: Nic1
+  m_Name: Image1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2216,16 +2216,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 688359524}
-  nicKopf0: {fileID: 160555332}
-  nicKopf1: {fileID: 591491022}
-  nicKopf2: {fileID: 244173050}
-  nicKopf3: {fileID: 781578467}
-  nicKopf4: {fileID: 114323981}
-  nic0Sound: {fileID: 8300000, guid: 871b03d7984ff544d82f9525e6592969, type: 3}
-  nic1Sound: {fileID: 8300000, guid: 89c37f0f4b9b2a64395a324b909202b8, type: 3}
-  nic2Sound: {fileID: 8300000, guid: c666cdb76cb0363489a7aeb8230b5cc3, type: 3}
-  nic3Sound: {fileID: 8300000, guid: 254272d7a1f1a4248840259e4e2a2dc1, type: 3}
-  nic4Sound: {fileID: 8300000, guid: 366b59d067010d34384a3271b9254437, type: 3}
+  image0: {fileID: 160555332}
+  image1: {fileID: 591491022}
+  image2: {fileID: 244173050}
+  image3: {fileID: 781578467}
+  image4: {fileID: 114323981}
+  sound0: {fileID: 8300000, guid: 871b03d7984ff544d82f9525e6592969, type: 3}
+  sound1: {fileID: 8300000, guid: 89c37f0f4b9b2a64395a324b909202b8, type: 3}
+  sound2: {fileID: 8300000, guid: c666cdb76cb0363489a7aeb8230b5cc3, type: 3}
+  sound3: {fileID: 8300000, guid: 254272d7a1f1a4248840259e4e2a2dc1, type: 3}
+  sound4: {fileID: 8300000, guid: 366b59d067010d34384a3271b9254437, type: 3}
 --- !u!1 &781578464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,7 +2238,7 @@ GameObject:
   - component: {fileID: 781578466}
   - component: {fileID: 781578467}
   m_Layer: 0
-  m_Name: Nic3
+  m_Name: Image3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class ChangeMaterialColor : MonoBehaviour
 {
-public Color greencolor;
-public ColliderCounter cc;
-public AudioClip collsionSound;
-private bool collidedWithOrange = false;
+    public ColliderCounter cc;
+    public Color collidedColor;
+    public AudioClip collisionSound;
+    private bool collidedWithOrange = false;
 
-void OnTriggerEnter(Collider other) 
-{
-    if (other.gameObject.CompareTag ("Marble")) 
+    private void OnTriggerEnter(Collider other) 
     {
-        transform.GetComponent<Renderer>().material.color = greencolor;
-        AudioSource.PlayClipAtPoint(collsionSound, transform.position, 1);
-        if (!collidedWithOrange)
+        if (other.gameObject.CompareTag ("Orange Marble")) 
         {
+            AudioSource.PlayClipAtPoint(collisionSound, transform.position, 1);
+            if (!collidedWithOrange)
+            {
+                transform.GetComponent<Renderer>().material.color = collidedColor;
                 cc.Increment();
                 collidedWithOrange = true;
+            }
         }
     }
-}
 }
