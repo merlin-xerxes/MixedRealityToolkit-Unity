@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8694346fd0d92442bb11d4387658cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collidedColor: {r: 0, g: 1, b: 0.101960786, a: 0}
   cc: {fileID: 1178354718}
+  collidedColor: {r: 0, g: 1, b: 0.101960786, a: 0}
   collisionSound: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
 --- !u!114 &245348087
 MonoBehaviour:
@@ -558,8 +558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8694346fd0d92442bb11d4387658cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collidedColor: {r: 0, g: 1, b: 0.101960786, a: 0}
   cc: {fileID: 1178354718}
+  collidedColor: {r: 0, g: 1, b: 0.101960786, a: 0}
   collisionSound: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
 --- !u!114 &246005365
 MonoBehaviour:
@@ -1381,8 +1381,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8694346fd0d92442bb11d4387658cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collidedColor: {r: 0, g: 1, b: 0.10175705, a: 0}
   cc: {fileID: 1178354718}
+  collidedColor: {r: 0, g: 1, b: 0.10175705, a: 0}
   collisionSound: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
 --- !u!1 &571168252
 GameObject:
@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gt: {fileID: 1178354719}
-  myUitext: {fileID: 1178354716}
+  counterText: {fileID: 2079391461}
 --- !u!114 &1178354719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3322,7 +3322,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Counter:    /3'
+  m_Text: 
 --- !u!222 &2079391462
 CanvasRenderer:
   m_ObjectHideFlags: 0
