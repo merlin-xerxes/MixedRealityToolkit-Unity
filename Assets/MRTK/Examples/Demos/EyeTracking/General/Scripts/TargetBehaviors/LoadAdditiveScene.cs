@@ -65,7 +65,7 @@ namespace Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
 
             Debug.Log($"New scene name: {SceneToBeLoaded}");
             lastSceneLoaded = SceneToBeLoaded;
-            SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         }
     }
 }
