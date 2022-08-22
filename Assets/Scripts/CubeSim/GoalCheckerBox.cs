@@ -6,7 +6,7 @@ public class GoalCheckerBox: MonoBehaviour
 {
 
     public GameObject checkboxCheck;
-    private int counter = 0;
+    public int counter = 0;
 
  
 
@@ -22,14 +22,14 @@ public class GoalCheckerBox: MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Würfel")
+        if (other.tag == "Wï¿½rfel")
             counter++;
             Debug.Log("in trigger");
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Würfel")
+        if (other.tag == "Wï¿½rfel")
             counter--;
             Debug.Log("out trigger");
     }

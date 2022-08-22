@@ -431,7 +431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563549573}
   m_LocalRotation: {x: -0, y: 0.13275307, z: -0, w: 0.9911492}
-  m_LocalPosition: {x: 0.09458262, y: -0.44840458, z: 0.9055052}
+  m_LocalPosition: {x: -0.579, y: -0.553, z: 0.94}
   m_LocalScale: {x: 0.06874719, y: 0.068747185, z: 0.0687472}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1383,7 +1383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016469058}
   m_LocalRotation: {x: -0, y: 0.5088097, z: -0, w: 0.86087906}
-  m_LocalPosition: {x: 0.098, y: -0.5296853, z: 0.917}
+  m_LocalPosition: {x: -0.568, y: -0.5500001, z: 0.844}
   m_LocalScale: {x: 0.06874719, y: 0.07275514, z: 0.06874721}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1795,6 +1795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a21b486d0bb44444b1418aaa38b44de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2696,7 +2697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608872554}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0.09644663, y: -0.3745929, z: 0.9098546}
+  m_LocalPosition: {x: -0.683, y: -0.526, z: 0.855}
   m_LocalScale: {x: 0.06874719, y: 0.068747185, z: 0.068747215}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3630,6 +3631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkboxCheck: {fileID: 1520758920}
+  counter: 0
 --- !u!65 &1828053910
 BoxCollider:
   m_ObjectHideFlags: 0
