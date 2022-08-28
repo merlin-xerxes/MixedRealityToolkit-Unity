@@ -22,14 +22,14 @@ public class GoalCheckerBox: MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "W�rfel")
+        if (other.tag == "Würfel")
             counter++;
             Debug.Log("in trigger");
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "W�rfel")
+        if (other.tag == "Würfel")
             counter--;
             Debug.Log("out trigger");
     }
